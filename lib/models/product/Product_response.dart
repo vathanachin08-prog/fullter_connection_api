@@ -1,11 +1,7 @@
 import 'Products.dart';
 
 class ProductResponse {
-  ProductResponse({
-      this.products, 
-      this.total, 
-      this.skip, 
-      this.limit,});
+  ProductResponse({this.products, this.total, this.skip, this.limit});
 
   ProductResponse.fromJson(dynamic json) {
     if (json['products'] != null) {
@@ -18,6 +14,7 @@ class ProductResponse {
     skip = json['skip'];
     limit = json['limit'];
   }
+
   List<Products>? products;
   int? total;
   int? skip;
